@@ -4,7 +4,7 @@ gem 'sinatra'
 gem 'sqlite3'
 gem 'activerecord'
 gem 'sinatra-activerecord'
-gem 'sinatra-contrip'
+gem 'sinatra-contrib'
 
 group :development do
   gem "tux"
