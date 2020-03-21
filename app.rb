@@ -3,9 +3,10 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
-set :database 'sqlite3:barbershop.db'
+set :database, 'sqlite3:barbershop.db'
 
-class Client < Activerecord::Base
+
+class Client < ActiveRecord::Base
 end
 
 configure do
@@ -27,7 +28,7 @@ before '/secure/*' do
 end
 
 get '/' do
-  erb 'Can you handle a <a href="/secure/place">secret</a>?'
+  erb :index
 end
 
 get '/login/form' do
